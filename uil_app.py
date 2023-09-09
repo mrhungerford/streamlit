@@ -1,16 +1,11 @@
 import streamlit as st
+import numpy as np
 
-from streamlit_gallery import apps, components
-#from streamlit_gallery.utils.page import page_group
+tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
+data = np.random.randn(10, 1)
 
-tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+tab1.subheader("A tab with a chart")
+tab1.line_chart(data)
 
-with tab1:
-   st.header("A cat")
-
-with tab2:
-   st.header("A dog")
-
-with tab3:
-   st.header("An owl")
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+tab2.subheader("A tab with the data")
+tab2.write(data)
