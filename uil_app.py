@@ -31,7 +31,8 @@ def main():
            wrap=c2.checkbox("Wrap enabled", value=False),
            auto_update=c2.checkbox("Auto update", value=False),
            readonly=c2.checkbox("Read-only", value=False),
-           min_lines=45,
+           min_lines=20,
+           max_lines=20,
            key="ace",
       )
    
