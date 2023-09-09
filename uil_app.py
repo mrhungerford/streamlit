@@ -11,6 +11,6 @@ df = pd.DataFrame(
    columns=('col %d' % i for i in range(5)))
 tab1.table(df)
 
-
-tab2.subheader("A place to write code")
-tab2.components.ace_editor
+with tab2:
+   tab2.subheader("A place to write code")
+   st.components.ace_editor
