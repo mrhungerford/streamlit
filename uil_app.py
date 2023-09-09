@@ -19,26 +19,26 @@ def main():
       c2.subheader("Parameters")
    
       with c1:
-        content = st_ace(
-           placeholder="Write your code here",
-           language="java",
-           theme=c2.selectbox("Theme", options=THEMES, index=35),
-           keybinding="vscode",
-           font_size=c2.slider("Font size", 5, 24, 14),
-           tab_size=4,
-           show_gutter=True,
-           #show_print_margin=c2.checkbox("Show print margin", value=False),
-           wrap=c2.checkbox("Wrap enabled", value=False),
-           #auto_update=c2.checkbox("Auto update", value=False),
-           #readonly=c2.checkbox("Read-only", value=False),
-           min_lines=20,
-           max_lines=20,
-           key="ace",
-      )
-   
-      if content:
-         st.subheader("Content")
-         st.text(content)
+         with st.container:
+           content = st_ace(
+              placeholder="Write your code here",
+              language="java",
+              theme=c2.selectbox("Theme", options=THEMES, index=35),
+              keybinding="vscode",
+              font_size=c2.slider("Font size", 5, 24, 14),
+              tab_size=4,
+              show_gutter=True,
+              #show_print_margin=c2.checkbox("Show print margin", value=False),
+              wrap=c2.checkbox("Wrap enabled", value=False),
+              #auto_update=c2.checkbox("Auto update", value=False),
+              #readonly=c2.checkbox("Read-only", value=False),
+              min_lines=20,
+              max_lines=20,
+              key="ace",
+         )
+         with c2:
+            st.subheader("Content")
+            st.text(content)
 def _max_height_(prcnt_height: int = 75):
    max_height_str = f"max-height: {prcnt_height}vh;"
    st.markdown(f""" 
