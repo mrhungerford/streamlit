@@ -64,5 +64,5 @@ def _max_height_(prcnt_height: int = 75):
 if __name__ == "__main__":
    st.set_page_config(page_title="UIL Code Editor", layout="wide")
    # Call the _max_height_ function with the desired percentage height
-   _max_height_(80)  # Set maximum height to 75%
+   _max_height_(100)  # Set maximum height to 75%
    main()
