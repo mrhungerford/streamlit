@@ -19,7 +19,6 @@ def main():
       c2.subheader("Parameters")
    
       with c1:
-         with st.container:
            content = st_ace(
               placeholder="Write your code here",
               language="java",
@@ -36,9 +35,9 @@ def main():
               max_lines=20,
               key="ace",
          )
-         with c2:
-            st.subheader("Content")
-            st.text(content)
+      with c2:
+         st.subheader("Content")
+         st.text(content)
 def _max_height_(prcnt_height: int = 75):
    max_height_str = f"max-height: {prcnt_height}vh;"
    st.markdown(f""" 
