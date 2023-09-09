@@ -4,7 +4,7 @@ import pandas as pd
 from streamlit_gallery import apps, components
 from streamlit_ace import st_ace, KEYBINDINGS, LANGUAGES, THEMES
 
-   def main():
+def main():
    tab1, tab2 = st.tabs(["Leaderboard", "Code Editor"])
    tab1.subheader("A place to see where you stand")
    df = pd.DataFrame(
