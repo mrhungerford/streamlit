@@ -13,4 +13,4 @@ tab1.table(df)
 
 with tab2:
    tab2.subheader("A place to write code")
-   st.components.ace_editor
+   components.ace_editor
