@@ -40,16 +40,23 @@ def main():
          st.subheader("Content")
          st.text(content)
 def _max_height_(prcnt_height: int = 75):
-    max_height_str = f"max-height: {prcnt_height}vh;"
-    st.markdown(f""" 
+   max_height_str = f"max-height: {prcnt_height}vh;"
+   st.markdown(f""" 
                 <style> 
                 .reportview-container .main .block-container{{{max_height_str}}}
                 </style>    
                 """, 
                 unsafe_allow_html=True,
-    )
+   )
+   no_scroll = '''
+   <style>
+      [data-testid="ScrollToBottomContainer"] {
+      overflow: hidden;
+   }
+   </style>'''
+   st.markdown(no_scroll, unsafe_allow_html=True)
 if __name__ == "__main__":
    st.set_page_config(page_title="UIL Code Editor", layout="wide")
    # Call the _max_height_ function with the desired percentage height
-   _max_height_(75)  # Set maximum height to 75%
+   _max_height_(80)  # Set maximum height to 75%
    main()
