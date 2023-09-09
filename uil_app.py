@@ -26,7 +26,7 @@ def main():
            keybinding=c2.selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
            font_size=c2.slider("Font size", 5, 24, 14),
            tab_size=4,
-           show_gutter="True,
+           show_gutter=True,
            #show_print_margin=c2.checkbox("Show print margin", value=False),
            wrap=c2.checkbox("Wrap enabled", value=False),
            #auto_update=c2.checkbox("Auto update", value=False),
