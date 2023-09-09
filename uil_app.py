@@ -65,4 +65,11 @@ if __name__ == "__main__":
    st.set_page_config(page_title="UIL Code Editor", layout="wide")
    # Call the _max_height_ function with the desired percentage height
    _max_height_(60)  # Set maximum height to 75%
+   hide_default_format = """
+       <style>
+       #MainMenu {visibility: hidden; }
+       footer {visibility: hidden;}
+       </style>
+       """
+   st.markdown(hide_default_format, unsafe_allow_html=True)
    main()
