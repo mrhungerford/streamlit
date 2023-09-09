@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+from streamlit_gallery import apps, components
 
 tab1, tab2 = st.tabs(["Leaderboard", "Code Editor"])
 
@@ -12,4 +13,4 @@ tab1.table(df)
 
 
 tab2.subheader("A place to write code")
-tab2.write(data)
+tab2.components.ace_editor
