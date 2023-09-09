@@ -48,20 +48,19 @@ def _max_height_(prcnt_height: int = 75):
                 """, 
                 unsafe_allow_html=True,
    )
-   no_scroll = '''
-   <style>
-      [data-testid="ScrollToBottomContainer"] {
-      overflow: hidden;
-   }
-   </style>'''
-   footer = '''
-   <style>
-      section.main > div:has(~ footer ) {
-      padding-bottom: 5px;
-   }
-   </style>'''
-   st.markdown(footer, unsafe_allow_html=True)
-   st.markdown(no_scroll, unsafe_allow_html=True)
+   padding = 0
+   css = """ <style>
+    .reportview-container .main .block-container{{
+        padding-top: {padding}rem;
+        padding-right: {padding}rem;
+        padding-left: {padding}rem;
+        padding-bottom: {padding}rem;
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        [data-testid="ScrollToBottomContainer"] {
+        overflow: hidden;}
+    }} </style> """
+   st.markdown(css, unsafe_allow_html=True)
 if __name__ == "__main__":
    st.set_page_config(page_title="UIL Code Editor", layout="wide")
    # Call the _max_height_ function with the desired percentage height
