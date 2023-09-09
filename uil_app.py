@@ -54,6 +54,13 @@ def _max_height_(prcnt_height: int = 75):
       overflow: hidden;
    }
    </style>'''
+   footer = '''
+   <style>
+      section.main > div:has(~ footer ) {
+      padding-bottom: 5px;
+   }
+   </style>'''
+   st.markdown(footer, unsafe_allow_html=True)
    st.markdown(no_scroll, unsafe_allow_html=True)
 if __name__ == "__main__":
    st.set_page_config(page_title="UIL Code Editor", layout="wide")
