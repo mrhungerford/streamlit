@@ -23,7 +23,7 @@ def main():
            placeholder="Write your code here",
            language="java",
            theme=c2.selectbox("Theme", options=THEMES, index=35),
-           keybinding=c2.selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
+           keybinding="vscode",
            font_size=c2.slider("Font size", 5, 24, 14),
            tab_size=4,
            show_gutter=True,
