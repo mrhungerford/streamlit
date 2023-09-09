@@ -20,8 +20,8 @@ def main():
    
       with c1:
         content = st_ace(
-           placeholder=c2.text_input("Editor placeholder", value="Write your code here"),
-           language=c2.selectbox("Language mode", options=LANGUAGES, index=121),
+           placeholder="Write your code here",
+           language="java",
            theme=c2.selectbox("Theme", options=THEMES, index=35),
            keybinding=c2.selectbox("Keybinding mode", options=KEYBINDINGS, index=3),
            font_size=c2.slider("Font size", 5, 24, 14),
